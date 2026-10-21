@@ -19,7 +19,34 @@ domain framework Individual Channel Anlysis and Design (ICAD).
 - `u1`, `u2`: manipulated plant inputs
 - `y1`, `y2`: plant outputs
 
-## Installation
+## Requirements
+
+This project requires Python 3 and the following libraries:
+
+- `control`: modeling, analysis, and simulation of control systems
+- `matplotlib`: visualization of system responses
+- `numpy`: numerical operations and array handling
+- `scipy`: scientific and numerical computation
+- `slycot`: numerical routines used by the Python Control Systems Library
+
+The complete list of dependencies is available in `requirements.txt`.
+
+## Creating a virtual environment
+
+Using a virtual environment is recommended to keep the project dependencies
+isolated from the main Python installation.
+
+### Windows
+
+Create the virtual environment:
 
 ```bash
 python -m venv .venv
+
+python -m pip install -r requirements.txt
+
+## Important note about Slycot 
+
+`Slycot` contains compiled numerical routines, so its installation can occasionally require additional compilers or system dependencies. Try the normal installation first: 
+
+```bash python -m pip install -r requirements.txt
